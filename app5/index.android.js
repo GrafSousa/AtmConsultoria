@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
+  View,
 } from 'react-native';
 
-import BarraNavegacao from './src/components/BarraNavegacao'
+import CenaPrincial from './src/components/CenaPrincipal';
 
 export default class app5 extends Component {
   render() {
     return (
-      <BarraNavegacao />
+      <CenaPrincial />
     );
   }
 }
