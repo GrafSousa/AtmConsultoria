@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  View,
 } from 'react-native';
 
+import { Navigator } from 'react-native-deprecated-custom-components';
+
 import CenaPrincial from './src/components/CenaPrincipal';
+import CenaClientes from './src/components/CenaClientes';
 
 export default class app5 extends Component {
   render() {
     return (
-      <CenaPrincial />
+      <Navigator
+        initialRoute={{ id: 'a' }}
+        renderScene={(route, navigator) => {
+          if(route.id === 'a') {
+            return (<CenaPrincial navigator={navigator}/>);
+          }
+
+          if(route.id === 'b') {
+            return (<CenaClientes />);
+          }
+        }}
+      />
     );
   }
 }
