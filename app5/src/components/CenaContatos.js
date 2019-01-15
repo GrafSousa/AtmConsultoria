@@ -27,8 +27,8 @@ export default class CenaContatos extends Component {
 
         <View style={ styles.detalheContatos }>
             <Text style={ styles.txtContatos }>TEL: (11) 1234-1232</Text>
-            <Text>CEL: (11) 91234-1234</Text>
-            <Text>E-MAIL: contato@atmconsultoria.com</Text>
+            <Text style={ styles.txtContatos }>CEL: (11) 91234-1234</Text>
+            <Text style={ styles.txtContatos }>E-MAIL: contato@atmconsultoria.com</Text>
         </View>
 
       </View>
