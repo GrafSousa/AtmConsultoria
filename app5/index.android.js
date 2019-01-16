@@ -9,6 +9,7 @@ import CenaPrincial from './src/components/CenaPrincipal';
 import CenaClientes from './src/components/CenaClientes';
 import CenaContatos from './src/components/CenaContatos';
 import CenaEmpresa from './src/components/CenaEmpresa';
+import CenaServicos from './src/components/CenaServicos';
 
 export default class app5 extends Component {
   render() {
@@ -16,20 +17,20 @@ export default class app5 extends Component {
       <Navigator
         initialRoute={{ id: 'principal' }}
         renderScene={(route, navigator) => {
-          if(route.id === 'principal') {
-            return (<CenaPrincial navigator={navigator}/>);
-          }
 
-          if(route.id === 'cliente') {
-            return (<CenaClientes navigator={navigator}/>);
-          }
-
-          if(route.id === 'contatos') {
-            return (<CenaContatos navigator={navigator}/>);
-          }
-
-          if(route.id === 'empresa') {
-            return (<CenaEmpresa navigator={navigator}/>);
+          switch(route.id){
+            case 'principal':
+              return (<CenaPrincial navigator={navigator}/>);
+            case 'cliente':
+              return (<CenaClientes navigator={navigator}/>);
+            case 'contatos':
+              return (<CenaContatos navigator={navigator}/>);
+            case 'empresa':
+              return (<CenaEmpresa navigator={navigator}/>);
+            case 'servico':
+              return (<CenaServicos navigator={navigator}/>);
+            default:
+              return false;
           }
         }}
       />
