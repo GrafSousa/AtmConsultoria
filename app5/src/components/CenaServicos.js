@@ -14,7 +14,7 @@ const detalheServicos = require('../imgs/detalhe_servico.png');
 export default class CenaServicos extends Component {
   render() {
     return (    
-      <View>
+      <View style={{ flex: 1, backgroundColor: '#FFF'}}>
         <StatusBar
           backgroundColor='#CCC'
         />
